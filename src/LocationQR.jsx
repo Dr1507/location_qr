@@ -168,15 +168,10 @@ function LocationQR() {
   };
 
   return (
-    <div className="relative flex h-screen h-[100dvh] flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] px-6 py-4 text-[#e5e7eb] max-[900px]:px-5 max-[900px]:pb-8 max-[900px]:pt-14 [@media(min-width:901px)_and_(max-height:820px)]:justify-start [@media(min-width:901px)_and_(max-height:820px)]:pt-11">
-      <main className="relative z-10 grid min-h-0 w-full max-w-[1060px] grid-cols-[1.1fr_1fr] items-center gap-11 max-[900px]:grid-cols-1 max-[900px]:gap-10 max-[900px]:max-w-[560px] [@media(min-width:901px)_and_(max-height:820px)]:gap-9">
+    <div className="relative flex min-h-screen min-h-[100dvh] flex-col items-center justify-center overflow-x-hidden overflow-y-auto bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] px-6 py-8 text-[#e5e7eb] max-[900px]:px-4 max-[900px]:py-6">
+      <main className="relative z-10 mx-auto grid w-full max-w-[1100px] grid-cols-[1.1fr_1fr] items-start gap-10 rounded-[28px] border border-white/20 bg-white/10 p-10 shadow-[0_25px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-md max-[900px]:grid-cols-1 max-[900px]:gap-8 max-[900px]:max-w-[580px] max-[900px]:p-6 max-[420px]:p-4">
         <section>
-          <span className="inline-flex items-center gap-[9px] rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.06em] text-[#e9d5ff]">
-            <span className="h-[7px] w-[7px] rounded-full bg-[#fbbf24] shadow-[0_0_0_4px_rgba(251,191,36,0.18)]" />
-            Free &amp; instant
-          </span>
-
-          <h1 className="mt-[18px] mb-[10px] bg-[linear-gradient(92deg,#ffffff_0%,#ffffff_58%,#fcd34d_88%,#fbbf24_100%)] bg-clip-text text-[clamp(2.2rem,5vw,3.4rem)] font-extrabold leading-[1.12] tracking-[-0.02em] text-transparent">
+          <h1 className="mt-0 mb-[10px] bg-[linear-gradient(92deg,#ffffff_0%,#ffffff_58%,#fcd34d_88%,#fbbf24_100%)] bg-clip-text text-[clamp(2.2rem,5vw,3.4rem)] font-extrabold leading-[1.12] tracking-[-0.02em] text-transparent">
             Location QR Code Generator
           </h1>
 
@@ -195,58 +190,6 @@ function LocationQR() {
               wayfinding.
             </p>
           </div>
-
-          <ol className="grid gap-4">
-            <li className="flex items-start gap-4 rounded-[18px] border border-white/[0.12] bg-white/[0.07] p-[18px_20px] backdrop-blur transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:border-white/25 hover:shadow-[0_14px_30px_-12px_rgba(0,0,0,0.5)] motion-safe:animate-[step-in_0.5s_ease_backwards] [@media(min-width:901px)_and_(max-height:820px)]:p-[14px_16px] max-[420px]:p-4 [&_svg]:h-[22px] [&_svg]:w-[22px]">
-              <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#ee2a7b,#6228d7)] text-white shadow-[0_8px_18px_-6px_rgba(238,42,123,0.6)]">
-                <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-                  1
-                </span>
-                <PinIcon />
-              </div>
-              <div className="min-w-0">
-                <h3 className="mt-0.5 mb-1 text-base font-semibold text-white">
-                  Enter your location
-                </h3>
-                <p className="text-[0.9rem] leading-[1.6] text-[#d1d5db]">
-                  Type an address, place name, or paste a Google Maps link.
-                </p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4 rounded-[18px] border border-white/[0.12] bg-white/[0.07] p-[18px_20px] backdrop-blur transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:border-white/25 hover:shadow-[0_14px_30px_-12px_rgba(0,0,0,0.5)] motion-safe:animate-[step-in_0.5s_ease_backwards] motion-safe:[animation-delay:100ms] [@media(min-width:901px)_and_(max-height:820px)]:p-[14px_16px] max-[420px]:p-4 [&_svg]:h-[22px] [&_svg]:w-[22px]">
-              <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#ee2a7b,#6228d7)] text-white shadow-[0_8px_18px_-6px_rgba(238,42,123,0.6)]">
-                <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-                  2
-                </span>
-                <QrIcon />
-              </div>
-              <div className="min-w-0">
-                <h3 className="mt-0.5 mb-1 text-base font-semibold text-white">
-                  Generate the QR
-                </h3>
-                <p className="text-[0.9rem] leading-[1.6] text-[#d1d5db]">
-                  Click the button and a scannable QR is created instantly.
-                </p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4 rounded-[18px] border border-white/[0.12] bg-white/[0.07] p-[18px_20px] backdrop-blur transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:border-white/25 hover:shadow-[0_14px_30px_-12px_rgba(0,0,0,0.5)] motion-safe:animate-[step-in_0.5s_ease_backwards] motion-safe:[animation-delay:200ms] [@media(min-width:901px)_and_(max-height:820px)]:p-[14px_16px] max-[420px]:p-4 [&_svg]:h-[22px] [&_svg]:w-[22px]">
-              <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#ee2a7b,#6228d7)] text-white shadow-[0_8px_18px_-6px_rgba(238,42,123,0.6)]">
-                <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-                  3
-                </span>
-                <DownloadIcon />
-              </div>
-              <div className="min-w-0">
-                <h3 className="mt-0.5 mb-1 text-base font-semibold text-white">
-                  Download &amp; share
-                </h3>
-                <p className="text-[0.9rem] leading-[1.6] text-[#d1d5db]">
-                  Save the QR as a PNG and print or post it anywhere; scanning
-                  opens the location in Google Maps.
-                </p>
-              </div>
-            </li>
-          </ol>
         </section>
 
         <aside className="relative rounded-[24px] bg-white p-8 text-[#0f172a] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.45),0_12px_24px_-12px_rgba(0,0,0,0.3)] transition-transform duration-300 ease-in-out hover:-translate-y-[3px] before:absolute before:left-6 before:right-6 before:top-0 before:h-[3px] before:rounded-b-md before:bg-[linear-gradient(90deg,#f9ce34,#ee2a7b,#6228d7)] before:opacity-90 before:content-[''] [@media(min-width:901px)_and_(max-height:820px)]:p-[26px] max-[420px]:p-[24px_20px]">
@@ -345,6 +288,58 @@ function LocationQR() {
             </div>
           )}
         </aside>
+
+        <ol className="col-span-full mt-2 flex w-full gap-4 max-[900px]:flex-col">
+          <li className="flex flex-1 items-start gap-4 rounded-[24px] border border-white/90 bg-white/75 p-5 text-[#0f172a] shadow-[0_20px_45px_-25px_rgba(15,23,42,0.12),0_2px_8px_rgba(15,23,42,0.04)] backdrop-blur-xl transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_28px_55px_-25px_rgba(79,70,229,0.25)] motion-safe:animate-[step-in_0.5s_ease_backwards] [&_svg]:h-[22px] [&_svg]:w-[22px]">
+            <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#6366f1,#a855f7)] text-white shadow-[0_8px_18px_-6px_rgba(99,102,241,0.55)]">
+              <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.2)]">
+                1
+              </span>
+              <PinIcon />
+            </div>
+            <div className="min-w-0">
+              <h3 className="mt-0.5 mb-1 text-[0.98rem] font-semibold leading-snug text-[#0f172a]">
+                Enter your location
+              </h3>
+              <p className="text-[0.88rem] leading-relaxed text-[#64748b]">
+                Type an address, place name, or paste a Google Maps link.
+              </p>
+            </div>
+          </li>
+          <li className="flex flex-1 items-start gap-4 rounded-[24px] border border-white/90 bg-white/75 p-5 text-[#0f172a] shadow-[0_20px_45px_-25px_rgba(15,23,42,0.12),0_2px_8px_rgba(15,23,42,0.04)] backdrop-blur-xl transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_28px_55px_-25px_rgba(79,70,229,0.25)] motion-safe:animate-[step-in_0.5s_ease_backwards] motion-safe:[animation-delay:100ms] [&_svg]:h-[22px] [&_svg]:w-[22px]">
+            <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#6366f1,#a855f7)] text-white shadow-[0_8px_18px_-6px_rgba(99,102,241,0.55)]">
+              <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.2)]">
+                2
+              </span>
+              <QrIcon />
+            </div>
+            <div className="min-w-0">
+              <h3 className="mt-0.5 mb-1 text-[0.98rem] font-semibold leading-snug text-[#0f172a]">
+                Generate the QR
+              </h3>
+              <p className="text-[0.88rem] leading-relaxed text-[#64748b]">
+                Click the button and a scannable QR is created instantly.
+              </p>
+            </div>
+          </li>
+          <li className="flex flex-1 items-start gap-4 rounded-[24px] border border-white/90 bg-white/75 p-5 text-[#0f172a] shadow-[0_20px_45px_-25px_rgba(15,23,42,0.12),0_2px_8px_rgba(15,23,42,0.04)] backdrop-blur-xl transition-all duration-300 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_28px_55px_-25px_rgba(79,70,229,0.25)] motion-safe:animate-[step-in_0.5s_ease_backwards] motion-safe:[animation-delay:200ms] [&_svg]:h-[22px] [&_svg]:w-[22px]">
+            <div className="relative grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[14px] bg-[linear-gradient(135deg,#6366f1,#a855f7)] text-white shadow-[0_8px_18px_-6px_rgba(99,102,241,0.55)]">
+              <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#fbbf24] text-[0.68rem] font-extrabold text-[#451a03] shadow-[0_2px_6px_rgba(0,0,0,0.2)]">
+                3
+              </span>
+              <DownloadIcon />
+            </div>
+            <div className="min-w-0">
+              <h3 className="mt-0.5 mb-1 text-[0.98rem] font-semibold leading-snug text-[#0f172a]">
+                Download &amp; share
+              </h3>
+              <p className="text-[0.88rem] leading-relaxed text-[#64748b]">
+                Save the QR as a PNG and print or post it anywhere; scanning
+                opens the location in Google Maps.
+              </p>
+            </div>
+          </li>
+        </ol>
       </main>
     </div>
   );

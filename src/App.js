@@ -178,10 +178,6 @@ function App() {
 
       <main className="app__grid">
         <section className="hero">
-          <span className="hero__badge">
-            <span className="hero__badge-dot" />
-            Free &amp; instant
-          </span>
           <h1 className="hero__title">Location QR Code Generator</h1>
           <p className="hero__subtitle">
             Create a scannable QR for any place in seconds.
@@ -196,46 +192,6 @@ function App() {
               wayfinding.
             </p>
           </div>
-
-          <ol className="steps">
-            <li className="step">
-              <div className="step__icon">
-                <span className="step__num">1</span>
-                <PinIcon />
-              </div>
-              <div className="step__body">
-                <h3 className="step__title">Enter your location</h3>
-                <p className="step__text">
-                  Type an address, place name, or paste a Google Maps link.
-                </p>
-              </div>
-            </li>
-            <li className="step">
-              <div className="step__icon">
-                <span className="step__num">2</span>
-                <QrIcon />
-              </div>
-              <div className="step__body">
-                <h3 className="step__title">Generate the QR</h3>
-                <p className="step__text">
-                  Click the button and a scannable QR is created instantly.
-                </p>
-              </div>
-            </li>
-            <li className="step">
-              <div className="step__icon">
-                <span className="step__num">3</span>
-                <DownloadIcon />
-              </div>
-              <div className="step__body">
-                <h3 className="step__title">Download &amp; share</h3>
-                <p className="step__text">
-                  Save the QR as a PNG and print or post it anywhere; scanning
-                  opens the location in Google Maps.
-                </p>
-              </div>
-            </li>
-          </ol>
         </section>
 
         <aside className="generator-card">
@@ -320,6 +276,46 @@ function App() {
             </div>
           )}
         </aside>
+
+        <ol className="steps">
+          <li className="step">
+            <div className="step__icon">
+              <span className="step__num">1</span>
+              <PinIcon />
+            </div>
+            <div className="step__body">
+              <h3 className="step__title">Enter your location</h3>
+              <p className="step__text">
+                Type an address, place name, or paste a Google Maps link.
+              </p>
+            </div>
+          </li>
+          <li className="step">
+            <div className="step__icon">
+              <span className="step__num">2</span>
+              <QrIcon />
+            </div>
+            <div className="step__body">
+              <h3 className="step__title">Generate the QR</h3>
+              <p className="step__text">
+                Click the button and a scannable QR is created instantly.
+              </p>
+            </div>
+          </li>
+          <li className="step">
+            <div className="step__icon">
+              <span className="step__num">3</span>
+              <DownloadIcon />
+            </div>
+            <div className="step__body">
+              <h3 className="step__title">Download &amp; share</h3>
+              <p className="step__text">
+                Save the QR as a PNG and print or post it anywhere; scanning
+                opens the location in Google Maps.
+              </p>
+            </div>
+          </li>
+        </ol>
       </main>
     </div>
   );
